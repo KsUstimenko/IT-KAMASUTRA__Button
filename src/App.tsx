@@ -1,19 +1,20 @@
-import React, {MouseEvent} from 'react';
+import React from 'react';
 import './App.css';
 
 function App() {
 
-    const onClickHandler = (name: string) => {
-        console.log(name)
+    const foo1 = () => {
+        console.log(100200)
     }
 
-  return (
-    <div className="App">
-      <button onClick={(event) => onClickHandler('Vasya')}>MyYouTubeChannel-1</button>
-      <button onClick={(event) =>onClickHandler('Ivan')}>MyYouTubeChannel-2</button>
-      <button onClick={() => onClickHandler('some info')}>MyYouTubeChannel-3</button>
+    const foo2 = (num: number) => {
+        console.log(num)
+    }
+
+    return <div>
+        <button onClick={foo1}>1</button>
+        <button onClick={() => foo2(100200)}>2</button>
     </div>
-  );
 }
 
 export default App;
