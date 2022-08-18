@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {MouseEvent} from 'react';
 import './App.css';
 
 function App() {
+
+    const onClickHandler = (name: string) => {
+        console.log(name)
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={(event) => onClickHandler('Vasya')}>MyYouTubeChannel-1</button>
+      <button onClick={(event) =>onClickHandler('Ivan')}>MyYouTubeChannel-2</button>
+      <button onClick={() => onClickHandler('some info')}>MyYouTubeChannel-3</button>
     </div>
   );
 }
